@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #7df07d;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    background-color: #050a1c;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+}
+.container h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.calc-container{
+    height: 100%;
+    border: 2px solid #050a1f;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(70px, auto) repeat(5, 70px);
+}
+.screen{
+    grid-column: 1/-1;
+    background-color: #fff;
+    border: 1px solid #050a1c;   
+    color: #050a1c; 
+    text-align: right;
+    padding: 10px;
+    font-family: poppins;
+}
+.screen .prev-operand{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.screen .current-operand{
+    font-size: 22px;
+    font-weight: bold;
+}
+.span-two{
+    grid-column: span 2;
+}
+.calc-container button{
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #050a1c;
+    outline: 0;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    transition: .7s ease;
+}
+.calc-container button:hover{
+    background-color: rgba(255, 255, 255, .5);
+}
