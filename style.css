@@ -9,7 +9,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
     height: 100vh;
-    width: 100;
+    width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -17,10 +17,14 @@ body{
 }
 .container{
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .container h1{
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .calc-container{
     height: 100%;
@@ -63,11 +67,14 @@ body{
 .calc-container button:hover{
     background-color: rgba(255, 255, 255, .5);
 }
-.ac{
-    background-color: green;
+.calc-container .ac{
+    background-color: #0f0;
 }
-.del{
-    background-color: red;
+.calc-container .del{
+    background-color: #f00;
+}
+.calc-container .yellow{
+    background-color: #ff0;
 }
 @media screen and (max-width: 600px) {
     .container h1{
