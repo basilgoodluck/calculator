@@ -10,13 +10,13 @@ body{
     font-family: 'Raleway', sans-serif;
     height: 100vh;
     overflow: hidden;
-}
-.container{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.container{
+    
     color: #fff;
-    flex-direction: column;
     padding: 20px;
 }
 .container h1{
