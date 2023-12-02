@@ -9,6 +9,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
     height: 100vh;
+    width: 100;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -61,7 +62,8 @@ body{
 }
 .calc-container button:hover{
     background-color: rgba(255, 255, 255, .5);
-}.ac{
+}
+.ac{
     background-color: green;
 }
 .del{
