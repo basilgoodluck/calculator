@@ -5,18 +5,18 @@
     padding: 0;
 }
 body{
-    background-color: #7df07d;
+    background-color: #050a1c; 
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    overflow: hidden;
 }
 .container{
-    background-color: #050a1c;   
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     flex-direction: column;
-    height: 100vh;
     padding: 20px;
 }
 .container h1{
@@ -62,4 +62,12 @@ body{
 }
 .calc-container button:hover{
     background-color: rgba(255, 255, 255, .5);
+}
+@media screen and (max-width: 600px) {
+    .container h1{
+        font-size: 2rem;
+    }
+    .screen{
+        height: 80px;
+    }
 }
