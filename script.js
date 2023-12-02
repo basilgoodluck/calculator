@@ -7,28 +7,29 @@ class Calculator {
         clear()
     }
     
-};
+    clear() {
+        this.prevOperand = ""
+        this.currentOperand = ""
+        this.operation = undefined
+    }
+    delete() {
 
-clear(){
-    this.prevOperand = ""
-    this.currentOperand = ""
-    this.operation = undefined
-};
-delete(){
+    }
+    appendNumber(number) {
+        this.currentOperand = number
+    }
+    chooseOperation(operation){
 
-};
-appendNumber(number){
-    this.currentOperand = number
-}
-chooseOperation(operation){
+    }
+    compute() {
 
+    }
+    update() {
+        this.currentOperandTextElement.innerText = this.currentOperand
+    }
 }
-compute(){
 
-}
-update(){
-    this.currentOperandTextElement.innerText = this.currentOperand
-}
+
 
 const numberBtn = document.querySelectorAll("[data-number]")
 const operationBtn = document.querySelectorAll("[data-operation]")
@@ -40,7 +41,7 @@ const currentOperand = document.querySelector("[data-current-operand]")
 
 const calculator = new Calculator(prevOperandTextElement, currentOperandTextElement)
 
-numberBtn.forEach((btn)=>{
+numberBtn.forEach((btn) => {
     btn.addEventListener("click", ()=>{
         calculator.appendNumber(btn.innerText)
         calculator.update()
