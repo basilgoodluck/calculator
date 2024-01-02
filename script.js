@@ -1,1 +1,6 @@
-console.log(document.getElementsByClassName('.data-number'))
+const numBtn = document.querySelectorAll('.numBtn')
+const clearBtn = document.querySelector('.clearBtn')
+const deleteBtn = document.querySelector('.deleteBtn')
+
+
+

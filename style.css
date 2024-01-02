@@ -58,7 +58,7 @@ body{
     grid-column: span 2;
 }
 
-.calc-container .calcMainCon button{
+.calc-container button{
     background-color: rgba(255, 255, 255, 1);
     outline: 0;
     cursor: pointer;
