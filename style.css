@@ -47,6 +47,8 @@ body{
     font-size: 22px;
     font-weight: 500;
     padding: 20px 0;
+    text-wrap: wrap;
+    word-break: break-all;
 }
 .screen .current-operand{
     font-size: 22px;
