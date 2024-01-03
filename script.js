@@ -1,14 +1,4 @@
-
-
-const numBtn = document.querySelectorAll('.numBtn')
-const operaBtn = document.querySelectorAll('.operaBtn')
-const clearBtn = document.querySelector('.clearBtn')
-const deleteBtn = document.querySelector('.deleteBtn')
-const prevScreen = document.querySelector('prev-operand')
-const currentScreen = document.querySelector('.current-operand')
-
-
-
+//Javascript code for a simple calculator using object
 
 const calculator = {
 
@@ -20,20 +10,33 @@ const calculator = {
     currentScreen : document.querySelector('.current-operand'),
 
     display () {
-        numBtn.forEach((num)=>{
-            num.addEventListener('click', ()=>{
-                var prevScreen = document.getElementById('prev-operand');
-                console.log(typeof prevScreen)
 
-                prevScreen.innerHTML += num.innerHTML
+        let accumulatedNumbers = ''; 
+        let initialNum = '';
+        let finalNum = '';
+
+        this.numBtn.forEach((num)=>{
+            num.addEventListener('click', ()=>{
+                
+                accumulatedNumbers += num.innerHTML
+
+                this.prevScreen.innerHTML = accumulatedNumbers;
+
+            })
+        })
+
+        this.operaBtn.forEach((opera) => {
+            opera.addEventListener('click', ()=>{
+                this.prevScreen.innerHTML = initialNum
             })
         })
     },
 
-    calculator () {
+
+
+    calculate () {
 
     }
-      
 }
 
 calculator.display()
