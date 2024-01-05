@@ -14,7 +14,6 @@ const calculator = {
         let accumulatedNumbers = ''; 
         let initialNum = '';
         let finalNum = '';
-
         this.numBtn.forEach((num)=>{
             num.addEventListener('click', ()=>{
                 
@@ -27,16 +26,13 @@ const calculator = {
 
         this.operaBtn.forEach((opera) => {
             opera.addEventListener('click', ()=>{
-                this.prevScreen.innerHTML = initialNum
+                initialNum = accumulatedNumbers
+                
+                accumulatedNumbers = ''
+                
             })
         })
-    },
-
-
-
-    calculate () {
-
-    }
+    }   
 }
 
 calculator.display()
