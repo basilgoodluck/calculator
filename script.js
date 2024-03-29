@@ -7,14 +7,23 @@ window.addEventListener('DOMContentLoaded', function(){
     const algebraBTNs = document.querySelectorAll('.operaBtn')
     const period = document.getElementById('pBtn')
 
+    
+    let a, b;
+    let expression = a + b;
+    
     numbers.forEach(e=>{
         e.addEventListener('click', ()=>{
             
             if(prevOperand.innerHTML == 0){
                 prevOperand.innerHTML = e.textContent
+                a = e.textContent
                 return
             }
             prevOperand.innerHTML += e.textContent
+            a += e.textContent
         })
+        
     })
+    
+    console.log(expression)
 })
