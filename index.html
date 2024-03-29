@@ -10,12 +10,12 @@
     <div class="container">
         <h1>Javascript Calculator</h1>
         <div class="calc-container">
-            <div class="screen">
+            <div class="screen" id="screen">
                 <div data-prev-operand id="prev-operand" class="prev-operand">0</div>
-                <div data-next-operand class="current-operand"></div>
+                <div data-next-operand class="current-operand" id="current-operand"></div>
             </div>
-            <button class="span-two clearBtn">AC</button>
-            <button class="deleteBtn">DEL</button>
+            <button class="span-two clearBtn" id="clearBtn">AC</button>
+            <button class="deleteBtn" id="deleteBtn">DEL</button>
             <button class="divideBtn operaBtn">/</button>
             <button class="numBtn">1</button>
             <button class="numBtn">2</button>
@@ -24,14 +24,14 @@
             <button class="numBtn">4</button>
             <button class="numBtn">5</button>
             <button class="numBtn">6</button>
-            <button class="addBtn operaBtn">+</button>
+            <button class="addBtn operaBtn" id="addBtn">+</button>
             <button class="numBtn">7</button>
             <button class="numBtn">8</button>
             <button class="numBtn">9</button>
-            <button class="minusBtn operaBtn">-</button>
+            <button class="minusBtn operaBtn" id="minusBtn">-</button>
             <button class="numBtn">0</button>
-            <button class="pBtn operaBtn">.</button>
-            <button class="span-two eBtn">=</button>
+            <button class="pBtn operaBtn" id="pBtn">.</button>
+            <button class="span-two eBtn" id="eBtn">=</button>
         </div>
     </div>
     <script src="/script.js"></script>

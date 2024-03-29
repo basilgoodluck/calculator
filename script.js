@@ -1,48 +1,20 @@
-//Javascript code for a simple calculator using object
+window.addEventListener('DOMContentLoaded', function(){
 
-const calculator = {
+    const screen = document.getElementById('screen')
+    const prevOperand = document.getElementById('prev-operand')
+    const currentOperand = document.getElementById('current-operand')
+    const numbers = document.querySelectorAll('.numBtn')
+    const algebraBTNs = document.querySelectorAll('.operaBtn')
+    const period = document.getElementById('pBtn')
 
-    numBtn : document.querySelectorAll('.numBtn'),
-    operaBtn : document.querySelectorAll('.operaBtn'),
-    clearBtn : document.querySelector('.clearBtn'),
-    deleteBtn : document.querySelector('.deleteBtn'),
-    prevScreen : document.querySelector('.prev-operand'),
-    currentScreen : document.querySelector('.current-operand'),
-    equation : '',
-    initialNum : '',
-    finalNum : '',
-    
-
-
-    display () {
-
-        let accumulatedNumbers = ''; 
-        this.numBtn.forEach((num)=>{
-            num.addEventListener('click', ()=>{
-                accumulatedNumbers += num.innerHTML
-                this.prevScreen.innerHTML = accumulatedNumbers;gi
-            })
+    numbers.forEach(e=>{
+        e.addEventListener('click', ()=>{
+            
+            if(prevOperand.innerHTML == 0){
+                prevOperand.innerHTML = e.textContent
+                return
+            }
+            prevOperand.innerHTML += e.textContent
         })
-
-        this.operaBtn.forEach((opera) => {
-            opera.addEventListener('click', ()=>{
-                initialNum = accumulatedNumbers
-                this.equation += initialNum
-                accumulatedNumbers = ''
-
-                this.numBtn.forEach((num) => {
-                    num.addEventListener('click', ()=>{
-                        this.finalNum += num.textContent
-                        this.equation += this.finalNum
-                        
-                    })
-                })
-
-            })
-        })
-        console.log(this.equation += this.initialNum)
-        
-    }   
-}
-
-calculator.display()
+    })
+})
