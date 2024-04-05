@@ -40,18 +40,20 @@ body{
     background-color: #fff;  
     color: #050a1c; 
     text-align: right;
-    padding: 10px;
+    padding: 0 10px;
     font-family: poppins;
+    display: flex;
+    flex-direction: column;
 }
 .screen .prev-operand{
-    font-size: 22px;
+    height: 20px;
+    padding: 3px 0;
+    font-size: 15px;
     font-weight: 500;
-    padding: 20px 0;
-    text-wrap: wrap;
-    word-break: break-all;
 }
 .screen .current-operand{
     font-size: 22px;
+    padding: 3px 0;
     font-weight: bold;
 }
 .span-two{
